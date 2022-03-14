@@ -1,14 +1,15 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 31
 
     defaultConfig {
         applicationId "org.snowcorp.login"
         minSdkVersion 19
-        targetSdkVersion 29
+        targetSdkVersion 31
         versionCode 1
         versionName "1.0"
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }
     buildTypes {
         release {
@@ -29,4 +30,6 @@ dependencies {
     implementation 'com.google.android.material:material:1.1.0'
 
     implementation 'com.android.volley:volley:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0-alpha04'
+    androidTestImplementation 'androidx.test:rules:1.4.1-alpha04'
 }
